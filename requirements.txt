@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+httpx
+numpy
+pypdf
+python-multipart
+anthropic
+qdrant-client
+ocrmac; sys_platform == "darwin"
+pytest

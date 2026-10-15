@@ -1,0 +1,161 @@
+[
+  {
+    "question": "Koji model je prvi na Serbian LLM Benchmark-u i koliki mu je ukupan rezultat?",
+    "expected_docs": [
+      "serbian-llm-bench.md"
+    ],
+    "expected_keywords": [
+      "gemma3",
+      "79.5"
+    ],
+    "expected_evidence": [
+      "gemma3 (4B) | **79.5**"
+    ]
+  },
+  {
+    "question": "Koliko zadataka ima kategorija Padeži u benchmarku?",
+    "expected_docs": [
+      "serbian-llm-bench.md"
+    ],
+    "expected_keywords": [
+      "20"
+    ],
+    "expected_evidence": [
+      "Padeži | 20 | svih sedam padeža"
+    ]
+  },
+  {
+    "question": "Šta vraća POST /customers kada email već postoji?",
+    "expected_docs": [
+      "carservice-api.md"
+    ],
+    "expected_keywords": [
+      "409"
+    ],
+    "expected_evidence": [
+      "duplicate email"
+    ]
+  },
+  {
+    "question": "Kada faktura za radni nalog vraća 422?",
+    "expected_docs": [
+      "carservice-api.md"
+    ],
+    "expected_keywords": [
+      "COMPLETED"
+    ],
+    "expected_evidence": [
+      "422 unless `COMPLETED`"
+    ]
+  },
+  {
+    "question": "Koji graderi postoje u llm-eval?",
+    "expected_docs": [
+      "llm-eval.md"
+    ],
+    "expected_keywords": [
+      "llm_judge"
+    ],
+    "expected_evidence": [
+      "`llm_judge`"
+    ]
+  },
+  {
+    "question": "Šta je potrebno da bi claude provajder radio u llm-eval?",
+    "expected_docs": [
+      "llm-eval.md"
+    ],
+    "expected_keywords": [
+      "ANTHROPIC_API_KEY"
+    ],
+    "expected_evidence": [
+      "ANTHROPIC_API_KEY"
+    ]
+  },
+  {
+    "question": "Koji provajder BrandPilot koristi kada nema API ključa?",
+    "expected_docs": [
+      "brandpilot.md"
+    ],
+    "expected_keywords": [
+      "mock"
+    ],
+    "expected_evidence": [
+      "default fallback"
+    ]
+  },
+  {
+    "question": "Koji su preduslovi za n8n Job Hunt pipeline?",
+    "expected_docs": [
+      "n8n-job-hunt.md"
+    ],
+    "expected_keywords": [
+      "Node 22"
+    ],
+    "expected_evidence": [
+      "Node 22+"
+    ]
+  },
+  {
+    "question": "Kako se Razumem nalaz instalira na telefon kao aplikacija?",
+    "expected_docs": [
+      "razumem-nalaz.md"
+    ]
+  },
+  {
+    "question": "Kako se pokreće dnevni automatski sken u MailGuard-u na macOS-u?",
+    "expected_docs": [
+      "mailguard.md"
+    ]
+  },
+  {
+    "question": "Kako se JobScout koristi za analizu oglasa i pisanje propratnog pisma?",
+    "expected_docs": [
+      "jobscout.md"
+    ]
+  },
+  {
+    "question": "Koje prečice su uzete u dine-agent projektu?",
+    "expected_docs": [
+      "dine-agent.md"
+    ]
+  },
+  {
+    "question": "Kako se poslovi-mcp registruje kao MCP server u Claude Code-u?",
+    "expected_docs": [
+      "poslovi-mcp.md"
+    ]
+  },
+  {
+    "question": "Kako dine-agent osigurava da model ne izmisli sto?",
+    "expected_docs": [
+      "dine-agent.md"
+    ]
+  },
+  {
+    "question": "Koji projekti iz kolekcije mogu da koriste Ollama?",
+    "expected_docs": [
+      "llm-eval.md",
+      "serbian-llm-bench.md",
+      "brandpilot.md",
+      "n8n-job-hunt.md",
+      "jobscout.md"
+    ]
+  },
+  {
+    "question": "Koliko košta JobScout licenca?",
+    "answerable": false
+  },
+  {
+    "question": "Koji je rezultat GPT-4 u Serbian LLM Benchmark-u?",
+    "answerable": false
+  },
+  {
+    "question": "Da li carservice-api podržava GraphQL?",
+    "answerable": false
+  },
+  {
+    "question": "Ko je predsednik Francuske?",
+    "answerable": false
+  }
+]

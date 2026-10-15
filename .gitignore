@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+.env
+data/
+web/node_modules/
+web/dist/
+
+# private evaluation material (guide of a private app); kept locally only
+eval/golden.json
+eval/report.json
