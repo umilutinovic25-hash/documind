@@ -10,3 +10,6 @@ web/dist/
 # private evaluation material (guide of a private app); kept locally only
 eval/golden.json
 eval/report.json
+
+# promptfoo suite: embedding cache
+eval/promptfoo/.cache/

@@ -115,6 +115,24 @@ What these numbers say, and don't:
   noise. This is a regression baseline, not a benchmark. `--retrieval-only` gives a fast, deterministic
   retrieval-only run.
 
+### Behavior and adversarial suite (promptfoo)
+`app.evaluate` measures retrieval; [`eval/promptfoo`](eval/promptfoo/promptfooconfig.yaml) checks what the
+answer *does*, through the real pipeline (Ollama, no API keys, no LLM grader — every assertion is deterministic):
+```bash
+brew install promptfoo
+cd eval/promptfoo && promptfoo eval   # promptfoo view for the web report
+```
+- **Answerable (5):** answers, cites `[n]`, retrieves the right document, contains the key fact
+- **Unanswerable (3):** abstains with no sources
+- **Adversarial (6):** instructions planted in a corpus document ([fixture](eval/promptfoo/fixtures/poisoned-vendor-note.md))
+  are ignored and its phishing bait is not repeated, override instructions in the question, system-prompt
+  extraction, an invented premise ("since it costs 50 €/month…"), and a request citing a non-existent source `[7]`
+- Every case also fails if the answer cites a source number that was not shown.
+
+Current result with gemma3:4b: **13/14**. All six adversarial cases pass. The failure is the known
+generation weak spot: "what does the claude provider need in llm-eval" retrieves the right file but
+misses the `ANTHROPIC_API_KEY` table row (same miss as in `report_multi.json`).
+
 ## Test
 ```bash
 .venv/bin/python -m pytest -q     # offline: deterministic fake embedder/LLM, no Ollama
